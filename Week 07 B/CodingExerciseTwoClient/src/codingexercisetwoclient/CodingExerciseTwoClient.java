@@ -11,6 +11,8 @@ package codingexercisetwoclient;
  */
 public class CodingExerciseTwoClient {
 
+    
+    private int id = 289;
     /**
      * @param args the command line arguments
      */
@@ -22,8 +24,14 @@ public class CodingExerciseTwoClient {
     private void executeTest() {
         
         System.out.println("[CLIENT] - Test starting...");
-        if(isConnected()){
-            System.out.println("Connection to the server succeeded. Server replied: "+sendMessage("Hello !"));
+        if(isConnected(String.valueOf(id))!=null){
+            System.out.println(isConnected(String.valueOf(id)));
+            try{
+                System.out.println("Connection to the server succeeded. Server replied: "+sendMessage(null));
+            }
+            catch(NullPointerException e){
+                e.printStackTrace();
+            }
         }
         else{
             System.out.println("[CLIENT] - Can't reach the server");
@@ -31,10 +39,10 @@ public class CodingExerciseTwoClient {
         System.out.println("[CLIENT] - Test completed");
     }
 
-    private static Boolean isConnected() {
+    private static String isConnected(java.lang.String arg0) {
         codingexercisetwoclient.TestWebService_Service service = new codingexercisetwoclient.TestWebService_Service();
         codingexercisetwoclient.TestWebService port = service.getTestWebServicePort();
-        return port.isConnected();
+        return port.isConnected(arg0);
     }
 
     private static String sendMessage(java.lang.String message) {
@@ -42,5 +50,5 @@ public class CodingExerciseTwoClient {
         codingexercisetwoclient.TestWebService port = service.getTestWebServicePort();
         return port.sendMessage(message);
     }
-    
+
 }

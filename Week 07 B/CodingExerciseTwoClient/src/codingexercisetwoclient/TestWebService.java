@@ -42,15 +42,18 @@ public interface TestWebService {
 
     /**
      * 
+     * @param arg0
      * @return
-     *     returns java.lang.Boolean
+     *     returns java.lang.String
      */
     @WebMethod
     @WebResult(targetNamespace = "")
     @RequestWrapper(localName = "isConnected", targetNamespace = "http://server/", className = "codingexercisetwoclient.IsConnected")
     @ResponseWrapper(localName = "isConnectedResponse", targetNamespace = "http://server/", className = "codingexercisetwoclient.IsConnectedResponse")
     @Action(input = "http://server/TestWebService/isConnectedRequest", output = "http://server/TestWebService/isConnectedResponse")
-    public Boolean isConnected();
+    public String isConnected(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
 
     /**
      * 
