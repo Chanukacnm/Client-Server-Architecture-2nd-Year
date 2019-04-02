@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://server/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://server/">
+
+<xs:element name="Exception" type="tns:Exception"/>
+
+<xs:element name="addSample" type="tns:addSample"/>
+
+<xs:element name="addSampleResponse" type="tns:addSampleResponse"/>
+
+<xs:element name="findMinimumAmongSamples" type="tns:findMinimumAmongSamples"/>
+
+<xs:element name="findMinimumAmongSamplesResponse" type="tns:findMinimumAmongSamplesResponse"/>
+
+<xs:element name="findMinimumBetween" type="tns:findMinimumBetween"/>
+
+<xs:element name="findMinimumBetweenResponse" type="tns:findMinimumBetweenResponse"/>
+
+<xs:element name="findMinimumBetweenWithException" type="tns:findMinimumBetweenWithException"/>
+
+<xs:element name="findMinimumBetweenWithExceptionResponse" type="tns:findMinimumBetweenWithExceptionResponse"/>
+
+<xs:element name="findMinimumCoordinate" type="tns:findMinimumCoordinate"/>
+
+<xs:element name="findMinimumCoordinateResponse" type="tns:findMinimumCoordinateResponse"/>
+
+<xs:element name="testConnection" type="tns:testConnection"/>
+
+<xs:element name="testConnectionResponse" type="tns:testConnectionResponse"/>
+
+<xs:complexType name="addSample">
+<xs:sequence>
+<xs:element name="sample" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addSampleResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="testConnection">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="testConnectionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findMinimumAmongSamples">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findMinimumAmongSamplesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findMinimumCoordinate">
+<xs:sequence>
+<xs:element name="point" type="tns:point2D" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="point2D">
+<xs:sequence>
+<xs:element name="x" type="xs:double" minOccurs="0"/>
+<xs:element name="y" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findMinimumCoordinateResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findMinimumBetweenWithException">
+<xs:sequence>
+<xs:element name="a" type="xs:double" minOccurs="0"/>
+<xs:element name="parameter1" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findMinimumBetweenWithExceptionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Exception">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findMinimumBetween">
+<xs:sequence>
+<xs:element name="a" type="xs:double" minOccurs="0"/>
+<xs:element name="b" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findMinimumBetweenResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
