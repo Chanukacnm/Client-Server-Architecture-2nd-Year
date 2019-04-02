@@ -94,20 +94,23 @@ public class MyClient {
         Person john = new Person();
         john.setName("John");
         john.setSurname("Connor");
+        addPerson(john);
         Person ali = new Person();
         ali.setName("Ali");
         ali.setSurname("Rehman");
+        addPerson(ali);
         Person jasmine = new Person();
         jasmine.setName("Jasmine");
         jasmine.setSurname("Afjani");
+        addPerson(jasmine);
         
-        System.out.println(findPersonWithLongestName().getName());
-/*        if(findPersonWithLongestName().getName().equals("Jasmine")){
+        
+        if(findPersonWithLongestName().getName().equals("Jasmine")){
             System.out.println("[CLIENT] - findPersonWithLongestName(), correct answer");
         }
         else{
             System.out.println("[CLIENT] - findPersonWithLongestName(), wrong answer");
-        }*/
+        }
     }
     
     public void executeTest(){
@@ -156,6 +159,12 @@ public class MyClient {
         tutorial.TestWebService_Service service = new tutorial.TestWebService_Service();
         tutorial.TestWebService port = service.getTestWebServicePort();
         return port.findPersonWithLongestName();
+    }
+
+    private static Integer addPerson(tutorial.Person person) {
+        tutorial.TestWebService_Service service = new tutorial.TestWebService_Service();
+        tutorial.TestWebService port = service.getTestWebServicePort();
+        return port.addPerson(person);
     }
     
 }

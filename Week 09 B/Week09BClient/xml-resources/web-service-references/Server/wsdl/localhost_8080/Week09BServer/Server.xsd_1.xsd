@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://server/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://server/">
+
+<xs:element name="Exception" type="tns:Exception"/>
+
+<xs:element name="addMyPoint3D" type="tns:addMyPoint3D"/>
+
+<xs:element name="addMyPoint3DResponse" type="tns:addMyPoint3DResponse"/>
+
+<xs:element name="addNumber" type="tns:addNumber"/>
+
+<xs:element name="addNumberResponse" type="tns:addNumberResponse"/>
+
+<xs:element name="addString" type="tns:addString"/>
+
+<xs:element name="addStringResponse" type="tns:addStringResponse"/>
+
+<xs:element name="addTwoNumbers" type="tns:addTwoNumbers"/>
+
+<xs:element name="addTwoNumbersResponse" type="tns:addTwoNumbersResponse"/>
+
+<xs:element name="addTwoNumbersWithException" type="tns:addTwoNumbersWithException"/>
+
+<xs:element name="addTwoNumbersWithExceptionResponse" type="tns:addTwoNumbersWithExceptionResponse"/>
+
+<xs:element name="averageOfAllNumbers" type="tns:averageOfAllNumbers"/>
+
+<xs:element name="averageOfAllNumbersResponse" type="tns:averageOfAllNumbersResponse"/>
+
+<xs:element name="findPointWithHighestZ" type="tns:findPointWithHighestZ"/>
+
+<xs:element name="findPointWithHighestZResponse" type="tns:findPointWithHighestZResponse"/>
+
+<xs:element name="findShortestAmongAllStrings" type="tns:findShortestAmongAllStrings"/>
+
+<xs:element name="findShortestAmongAllStringsResponse" type="tns:findShortestAmongAllStringsResponse"/>
+
+<xs:element name="findShortestBetween" type="tns:findShortestBetween"/>
+
+<xs:element name="findShortestBetweenResponse" type="tns:findShortestBetweenResponse"/>
+
+<xs:element name="findShortestBetweenWithException" type="tns:findShortestBetweenWithException"/>
+
+<xs:element name="findShortestBetweenWithExceptionResponse" type="tns:findShortestBetweenWithExceptionResponse"/>
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:element name="isConnected" type="tns:isConnected"/>
+
+<xs:element name="isConnectedResponse" type="tns:isConnectedResponse"/>
+
+<xs:complexType name="findPointWithHighestZ">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findPointWithHighestZResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:myPoint3D" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="myPoint3D">
+<xs:sequence>
+<xs:element name="x" type="xs:double" minOccurs="0"/>
+<xs:element name="y" type="xs:double" minOccurs="0"/>
+<xs:element name="z" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addMyPoint3D">
+<xs:sequence>
+<xs:element name="arg0" type="tns:myPoint3D" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addMyPoint3DResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findShortestAmongAllStrings">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findShortestAmongAllStringsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findShortestBetweenWithException">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findShortestBetweenWithExceptionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Exception">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addTwoNumbers">
+<xs:sequence>
+<xs:element name="arg0" type="xs:double" minOccurs="0"/>
+<xs:element name="arg1" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addTwoNumbersResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isConnected">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="isConnectedResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="averageOfAllNumbers">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="averageOfAllNumbersResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addNumber">
+<xs:sequence>
+<xs:element name="arg0" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addNumberResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="addTwoNumbersWithException">
+<xs:sequence>
+<xs:element name="arg0" type="xs:double" minOccurs="0"/>
+<xs:element name="arg1" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addTwoNumbersWithExceptionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findShortestBetween">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findShortestBetweenResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addString">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addStringResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
