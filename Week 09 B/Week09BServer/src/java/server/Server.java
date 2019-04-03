@@ -5,11 +5,13 @@
  */
 package server;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
+import static jdk.nashorn.internal.objects.NativeMath.round;
 
 /**
  *
@@ -55,7 +57,7 @@ public class Server {
     }
 
     public double addTwoNumbersWithException(Double d, Double d0) throws Exception{
-        if(d!=0 && d0!=0){
+        if(d!=null && d0!=null){
             return d+d0;
         }
         else{
@@ -68,13 +70,19 @@ public class Server {
     }
 
     public double averageOfAllNumbers() {
-        int total = 0;
+        double total = 0;
         
         for(int i = 0; i<numberList.size(); i++){
             total += numberList.get(i);
+            System.out.println("added "+numberList.get(i)+" and total is "+total);
         }
-        
-        return total/numberList.size();
+        System.out.println("total = "+total);
+        System.out.println("List size = "+numberList.size());
+        double average = total/numberList.size();
+        DecimalFormat df = new DecimalFormat("#.##");      
+        average = Double.valueOf(df.format(average));
+        System.out.println("average = "+average);
+        return average;
     }
 
     public void  addMyPoint3D(MyPoint3D p1) {
