@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://server/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://server/">
+
+<xs:element name="Exception" type="tns:Exception"/>
+
+<xs:element name="addNameToServer" type="tns:addNameToServer"/>
+
+<xs:element name="addNameToServerResponse" type="tns:addNameToServerResponse"/>
+
+<xs:element name="addStudentToServer" type="tns:addStudentToServer"/>
+
+<xs:element name="addStudentToServerResponse" type="tns:addStudentToServerResponse"/>
+
+<xs:element name="findLongestNameInServer" type="tns:findLongestNameInServer"/>
+
+<xs:element name="findLongestNameInServerResponse" type="tns:findLongestNameInServerResponse"/>
+
+<xs:element name="findStudentWithHighestGrade" type="tns:findStudentWithHighestGrade"/>
+
+<xs:element name="findStudentWithHighestGradeResponse" type="tns:findStudentWithHighestGradeResponse"/>
+
+<xs:element name="getStringLength" type="tns:getStringLength"/>
+
+<xs:element name="getStringLengthResponse" type="tns:getStringLengthResponse"/>
+
+<xs:element name="getStringLengthWithException" type="tns:getStringLengthWithException"/>
+
+<xs:element name="getStringLengthWithExceptionResponse" type="tns:getStringLengthWithExceptionResponse"/>
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:element name="isConnected" type="tns:isConnected"/>
+
+<xs:element name="isConnectedResponse" type="tns:isConnectedResponse"/>
+
+<xs:complexType name="isConnected">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="isConnectedResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getStringLengthWithException">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getStringLengthWithExceptionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Exception">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findLongestNameInServer">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findLongestNameInServerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findStudentWithHighestGrade">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findStudentWithHighestGradeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:student" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="student">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="surname" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:string" minOccurs="0"/>
+<xs:element name="grade" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getStringLength">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getStringLengthResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addNameToServer">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addNameToServerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addStudentToServer">
+<xs:sequence>
+<xs:element name="arg0" type="tns:student" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addStudentToServerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://server/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://server/">
+
+<xs:element name="Exception" type="tns:Exception"/>
+
+<xs:element name="addPerson" type="tns:addPerson"/>
+
+<xs:element name="addPersonResponse" type="tns:addPersonResponse"/>
+
+<xs:element name="addString" type="tns:addString"/>
+
+<xs:element name="addStringResponse" type="tns:addStringResponse"/>
+
+<xs:element name="findPersonWithLongestName" type="tns:findPersonWithLongestName"/>
+
+<xs:element name="findPersonWithLongestNameResponse" type="tns:findPersonWithLongestNameResponse"/>
+
+<xs:element name="findShortestAmongStrings" type="tns:findShortestAmongStrings"/>
+
+<xs:element name="findShortestAmongStringsResponse" type="tns:findShortestAmongStringsResponse"/>
+
+<xs:element name="findShortestBetween" type="tns:findShortestBetween"/>
+
+<xs:element name="findShortestBetweenResponse" type="tns:findShortestBetweenResponse"/>
+
+<xs:element name="findShortestBetweenWithException" type="tns:findShortestBetweenWithException"/>
+
+<xs:element name="findShortestBetweenWithExceptionResponse" type="tns:findShortestBetweenWithExceptionResponse"/>
+
+<xs:element name="testConnection" type="tns:testConnection"/>
+
+<xs:element name="testConnectionResponse" type="tns:testConnectionResponse"/>
+
+<xs:complexType name="testConnection">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="testConnectionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findShortestBetweenWithException">
+<xs:sequence>
+<xs:element name="a" type="xs:string" minOccurs="0"/>
+<xs:element name="b" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findShortestBetweenWithExceptionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Exception">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findShortestAmongStrings">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findShortestAmongStringsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findPersonWithLongestName">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findPersonWithLongestNameResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:person" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="person">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="surname" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findShortestBetween">
+<xs:sequence>
+<xs:element name="a" type="xs:string" minOccurs="0"/>
+<xs:element name="b" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findShortestBetweenResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addPerson">
+<xs:sequence>
+<xs:element name="person" type="tns:person" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addPersonResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addString">
+<xs:sequence>
+<xs:element name="str" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addStringResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
